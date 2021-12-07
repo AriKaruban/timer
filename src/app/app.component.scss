@@ -1,0 +1,19 @@
+.ring{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+}
+.timer{
+    border: 3px solid #9d0000;
+    border-right: none;
+    box-shadow: 0 0 40px 20px #414046;
+    padding: 50px;
+    border-radius: 100%;
+    width: 20vw;
+    height: 20vw;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}

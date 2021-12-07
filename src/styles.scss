@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2B2A30;
+}
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('./assets/fonts/bebasneue-book-webfont.woff') format('woff'),
+          url('./assets/fonts/bebasneue-book-webfont.woff2') format('woff2');
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+input{
+    font-family: MyWebFont;
+}
+button{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
