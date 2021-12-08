@@ -1,3 +1,5 @@
+//#09A65A\
+//#9d0000
 .ring{
     display: grid;
     width: 100vw;
@@ -6,9 +8,8 @@
     justify-content: center;
 }
 .timer{
-    border: 3px solid #9d0000;
-    border-right: none;
-    box-shadow: 0 0 40px 20px #414046;
+    border: 3px solid #09A65A;
+    box-shadow: 0 0 40px 20px #414046, inset 0 0 40px 20px #1f1e22;
     padding: 50px;
     border-radius: 100%;
     width: 20vw;
@@ -16,4 +17,45 @@
     display: grid;
     align-content: center;
     justify-content: center;
+    grid-template-rows: 60% 30%;
+    row-gap: 5px;
+}
+.timer.end{
+    border: 3px solid #9d0000;
+}
+button,input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+.time{
+    column-gap: 10px;
+    color: white;
+    font-size: 5em;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 20px 1fr;
+    width: 100%;
+    align-items: baseline;
+}
+input{
+    border-bottom: 1px solid white;
+    max-width: 70px;
+    font-size: 1em;
+    padding: 5px;
+}
+.buttons{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    button{
+        opacity: .6;
+    }
+    button:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
 }

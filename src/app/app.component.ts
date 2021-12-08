@@ -17,7 +17,13 @@ export class AppComponent {
       this.editimg = "../assets/images/gear.svg"
     }else{this.editimg = "../assets/images/check.svg"}}
   }
+  timer = document.getElementsByClassName("timer")
   counting
+  end(){
+    clearInterval(this.counting)
+    this.timer[0].classList.add("end")
+    this.status='start'
+  }
   countdown(){
     if(this.editmode==true){
     if(this.status=='stop'){
@@ -26,16 +32,22 @@ export class AppComponent {
       this.status='stop'
     }
     if(this.status=='stop'){
+      this.timer[0].classList.remove("end")
       this.counting = setInterval(()=>{
         let sec:any=(<HTMLInputElement>document.getElementById("sec")).value
         let min:any=(<HTMLInputElement>document.getElementById("min")).value
         if(sec!=="0"&&this.status=='stop'){
           sec-=1;
           (<HTMLInputElement>document.getElementById("sec")).value=sec
+          if(min==0&&sec==0){
+            this.end()
+          }
         }else if(min!=="0"&&this.status=='stop'){
           min-=1;
           (<HTMLInputElement>document.getElementById("min")).value=min;
           (<HTMLInputElement>document.getElementById("sec")).value="59"
+        }else if(min==0&&sec==0){
+          this.end()
         }
       },1000)
       
